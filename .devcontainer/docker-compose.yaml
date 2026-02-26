@@ -1,0 +1,25 @@
+services:
+  stringifying_arktype_errors:
+    build:
+      args:
+        DEBIAN__DOCKER_IMAGE__TAG__DATE: "20260918"
+      context: "."
+      dockerfile: "Dockerfile"
+    depends_on: {}
+    env_file:
+      - path: "./.env"
+        required: true
+    environment: {}
+    volumes:
+      - consistency: "consistent"
+        read_only: false
+        source: ".."
+        target: "/home/developer/stringifying-arktype-errors"
+        type: "bind"
+      - consistency: "consistent"
+        read_only: false
+        source: "./.bashrc"
+        target: "/home/developer/.bashrc"
+        type: "bind"
+    working_dir: "/home/developer/stringifying-arktype-errors"
+volumes: {}
