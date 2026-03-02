@@ -551,8 +551,14 @@ export default [
 					zones: [
 						{
 							except: [],
-							from: `./!(node_modules|stringifying-ArkType-errors|testing)/**/*`,
-							message: `The testing module should not import non-testing code.`,
+							from: `./!(node_modules|source|stringifying-ArkType-errors)/**/*`,
+							message: `The source module should not import non-source code.`,
+							target: `./source/**/!(*.test.ts)`,
+						},
+						{
+							except: [],
+							from: `./!(node_modules|source|stringifying-ArkType-errors|testing)/**/*`,
+							message: `The testing module should not import non-source code or non-testing code.`,
 							target: `./testing/**/*`,
 						},
 						{
