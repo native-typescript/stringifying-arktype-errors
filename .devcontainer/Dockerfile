@@ -7,5 +7,6 @@ RUN mkdir /home/developer/stringifying-arktype-errors
 RUN chown developer:developer /home/developer/stringifying-arktype-errors
 RUN apt-get update && apt-get install -y --no-install-recommends git && rm -rf /var/lib/apt/lists/*
 RUN apt-get update && apt-get install -y --no-install-recommends openssh-client && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y --no-install-recommends curl && rm -rf /var/lib/apt/lists/*
 USER developer
 WORKDIR /home/developer/stringifying-arktype-errors
