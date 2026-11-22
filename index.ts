@@ -1,1 +1,1 @@
-export type * as stringifyingArktypeErrors from "./source/module.ts";
+export * as stringifyingArktypeErrors from "./source/module.ts";

@@ -7,6 +7,9 @@
 	"bugs": {
 		"url": "https://github.com/native-typescript/stringifying-arktype-errors/issues"
 	},
+	"dependencies": {
+		"arktype": "2.2.9"
+	},
 	"description": "A stringifying ArkType errors library for better error messages.",
 	"devDependencies": {
 		"@commitlint/cli": "21.2.3",
